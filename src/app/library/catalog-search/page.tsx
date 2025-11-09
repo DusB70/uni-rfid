@@ -197,23 +197,25 @@ export default function CatalogSearch() {
     );
   }
 
-  return (
-    <div className="container mx-auto py-6 px-4">
-      {/* Header */}
-      <PageHeader
-        title="Catalog Search"
-        breadcrumbs={[
-          { label: "Library", href: "/library/dashboard" },
-          { label: "Catalog Search" },
-        ]}
-        backHref="/library/dashboard"
-        centerIcon={<FileSearch className="h-8 w-8 text-primary mx-auto" />}
-        right={
-          <div className="text-sm text-muted-foreground">
-            {books.length} books found
-          </div>
-        }
-      />
+    return (
+        <div className="container mx-auto py-6 px-4">
+            {/* Header */}
+            <PageHeader
+                title="Catalog Search"
+                breadcrumbs={[
+                    { label: "Library", href: "/library" },
+                    { label: "Catalog Search" },
+                ]}
+                backHref="/library"
+                centerIcon={
+                    <FileSearch className="h-8 w-8 text-primary mx-auto" />
+                }
+                right={
+                    <div className="text-sm text-muted-foreground">
+                        {books.length} books found
+                    </div>
+                }
+            />
 
       {/* Search Section */}
       <Card className="mb-6">
